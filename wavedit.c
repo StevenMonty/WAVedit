@@ -171,7 +171,7 @@ void reverse(char* filename) {
       fread(&samples, sizeof(samples), 1, file);
 
       for (int i = 0, j = sampleLength - 1; i < j; i++, j--) {
-           uint16_t temp = samples[i];
+           uint32_t temp = samples[i];
            samples[i] = samples[j];
            samples[j] = temp;
         }
